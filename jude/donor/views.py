@@ -1,12 +1,24 @@
+from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
+from twilio.twiml.messaging_response import MessagingResponse
 
-# Create your views here.
-def sms_reply():
-    """Respond to incoming calls with a simple text message."""
-    # Fetch the message
-    msg = request.form.get('Body')
-    
-    # Create reply
-    resp = MessagingResponse()
-    resp.message("You said: {}".format(msg))
+@csrf_exempt
+def sms_reply(request):
+	print("hello")
+	"""Respond to incoming calls with a simple text message."""
+	# Fetch the message
+	msg = request.POST.get('Body')
 
-    return str(resp)
+	#info = .objects.filter(complaint_type='Intercom').order_by('complaint_date')
+	# Create reply
+	#from django.db.models import OuterRef, Subquery
+	#newest = Comment.objects.filter(post=OuterRef('pk')).order_by('-created_at')
+	#Post.objects.annotate(newest_commenter_email=Subquery(newest.values('email')[:1]))
+
+
+	#u = Donor.objects.filter(unitno = msg)
+
+	resp = MessagingResponse()
+	resp.message("You said: {}".format(msg))
+
+	return HttpResponse(str(resp))
