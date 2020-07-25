@@ -1,4 +1,4 @@
-
+from django.http import HttpResponse
 # Create your views here.
 def sms_reply():
     """Respond to incoming calls with a simple text message."""
