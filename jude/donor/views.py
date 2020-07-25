@@ -22,3 +22,4 @@ def sms_reply(request):
 	resp.message("You said: {}".format(msg))
 
 	return HttpResponse(str(resp))
+
