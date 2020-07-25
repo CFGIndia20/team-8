@@ -4,4 +4,5 @@ from admin_side import views
 app_name='admin_side'
 urlpatterns = [
 	path('', views.index, name='index'),
+	path('test', views.test, name='test'),
 ]
