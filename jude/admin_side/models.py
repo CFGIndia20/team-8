@@ -13,6 +13,7 @@ class Center(models.Model):
 
 class Patients(models.Model):
     uid = models.IntegerField(primary_key=True)
+    name = models.CharField(max_length=30)
     unitno = models.IntegerField()
     prefered_language = models.CharField(max_length=30)
     checkin_date_time = models.DateTimeField()
