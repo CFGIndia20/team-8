@@ -25,8 +25,7 @@ SECRET_KEY = 'j7^e4a99_fd*y8swh=hl3hkbhrl83d@!n(t!kx&e(at)79(u-+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.ngrok.io','127.0.0.1', 'localhost']
-
+ALLOWED_HOSTS = ['.ngrok.io','127.0.0.1',]
 
 
 # Application definition
@@ -127,4 +126,4 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
     '/var/www/static/',
 ]
-
+AUTH_USER_MODEL = 'admin_side.CustomUser'
