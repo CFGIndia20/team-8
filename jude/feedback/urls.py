@@ -3,5 +3,5 @@ from feedback import views
 
 app_name='feedback'
 urlpatterns = [
-	path('feedback_processing', views.feedback_processing, name='feedback_processing'),
+	path('sms_reply', views.sms_reply, name='sms_reply')
 ]
