@@ -5,4 +5,6 @@ app_name='admin_side'
 urlpatterns = [
 	path('', views.index, name='index'),
 	path('test', views.test, name='test'),
+	#path('charts', views.charts, name='charts'),
+
 ]
