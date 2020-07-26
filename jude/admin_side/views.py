@@ -30,5 +30,8 @@ def test(request):
 
 
 
+def Centre(request):	
+	return render(request,'admin_side/Centre.html')
+
 
 # Create your views here.
